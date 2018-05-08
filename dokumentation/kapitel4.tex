@@ -1,0 +1,119 @@
+\chapter{Hinweise zum Schreiben der Arbeit} \label{kap_schreiben}
+
+Die Arbeit stellt eine eigenständige wissenschaftliche Arbeit der/s StudentIn dar. Sie wird auf jeden Fall vom Erst- und ZweitprüferIn gelesen, aber soll allgemein so verfasst werden, dass sie für LeserInnen aus dem Fachgebiet ohne das Studium weiterer Literatur verständlich ist. Dieses trifft insbesondere auf MitarbeiterInnen von Firmen zu, bei denen die Arbeit ggf. erstellt wurde.
+
+\section{Umfang der Arbeit}
+
+Für den Umfang der Arbeit kann keine spezifische Vorgabe gemacht werden, da dieses von der Art des Themas abhängt. Bei einem Thema, das eine umfangreiche Literaturrecherche erfordert, kann eine längere Ausarbeitung notwendig sein als bei einem Thema, bei dem die praktische Umsetzung einen wesentlichen Bestandteil dargestellt. Die Tabelle \ref{tab:umfang} enthält Empfehlungen für den Umfang für verschiedene Typen von Arbeiten.
+
+%Tabellen im Regelfall auch in eine Figure-Umgebung setzen - Verwendung von Table-Umgebung lohnt nur bei sehr vielen Tabellen
+\begin{table}[htb]
+  \centering
+  \begin{tabular}{|l|p{3cm}p{3cm}p{3cm}|}
+    \hline
+    \textbf{Art der Arbeit} & \textbf{Minimal} & \textbf{Mittelwert} & \textbf{Maximal}\\ \hline
+    Projektarbeit & 10 Seiten  + Anhänge (+ CD) & 15 Seiten + Anhänge (+ CD) & 30 Seiten  + Anhänge (+ CD)\\ \hline
+    Bachelorarbeit & 30 Seiten + Anhänge + CD & 45 Seiten + Anhänge + CD & 100 Seiten + Anhänge + CD\\ \hline
+		Masterarbeit & 60 Seiten + Anhänge + CD & 75 Seiten + Anhänge + CD & 130 Seiten + Anhänge + CD \\
+    \hline
+  \end{tabular}
+  \caption{Empfehlungen für den Umfang von studentischen Arbeiten}\label{tab:umfang}
+\end{table}
+
+Wichtig zu beachten ist, dass der Umfang an sich kein Qualitätsmerkmal ist (Einsteins Doktorarbeit hatte 17 Seiten \cite{stra05}, siehe auch Sammlung kurioser Uni-Fakten \cite{unic13}). In der wissenschaftlichen Ausdrucksweise sollte auf Präzision anstelle von langwierigen Ausführungen geachtet werden.
+
+\section{Schreibstil}
+
+Eine Abschlussarbeit ist vergleichbar mit einem wissenschaftlichen Buch, wie z.B. Andrew S. Tanenbaums "`Computernetzwerke"', oder einem Forschungsbericht. Außerdem könnte die Abschlussarbeit auch als wissenschaftliches Dokument oder als Anleitung in einem Labor oder einer Firma weiterverwendet werden. Deshalb sollte das Dokument so geschrieben sein, dass die während der Erstellung der Abschlussarbeit durchgeführten Tätigkeiten nachvollzogen werden können.
+
+Das wissenschaftliche Schreiben unterliegt formaleren Anforderungen, so dass umgangssprachliche Formulierungen nicht vorkommen sollten. Bei der Verwendung von englischen Begriffen sollte jeweils abgewogen werden, ob eine sinnvolle deutschsprachige Übersetzung existiert oder ob der englische Begriff sich weitestgehend auch im deutschen etabliert hat. Im übrigen ist zu beachten, dass mehrere englische Hauptworte hintereinander ohne Bindestrich geschrieben werden. Sind diese mit einem deutschen Wort verbunden, erfolgt ein Bindestrich (z.B.~ System Design-Projekt).
+
+Eine andere wichtige Frage ist die Wahl zwischen aktiven und passiven Formulierungen. Ein Sachverhalt kann beispielsweise aktiv als "`Ich führte Frequenzmessungen durch."' formuliert werden. Diese Darstellung macht deutlich, was vom AutorIn selbst durchgeführt wurde und nicht von anderen. Diese Schreibweise ist jedoch in wissenschaftlichen Darstellungen unüblich und sollte in der Arbeit nur dort Anwendung finden, wenn Unklarheiten bestehen könnten, wer etwas gemacht hat. Es bietet sich außerdem eine Formulierung wie "`Von der Autorin wurden Frequenzmessungen durchgeführt"' an. Meistens ist eine passive Formulierung wie "`Es wurden Frequenzmessungen durchgeführt"' angezeigt.
+
+In wissenschaftlichen Abhandlungen ist es zudem unüblich, die Leserin oder den Leser direkt anzusprechen.
+
+\section{Verwendung von Zeiten}
+
+Normalerweise sollte die Arbeit im Präsens geschrieben werden, gerade wenn es um allgemeine Zusammenhänge geht. Wenn an manchen Stellen ein Ablauf geschildert werden soll, mit dem ein Ergebnis erreicht wurde, können auch Vergangenheitsformen verwendet werden. Hierbei sollte die Verwendung der Zeiten in sich schlüssig sein.
+
+\section{Grundlegende Anforderungen an die Formatierung}
+
+Für die Formatierung gibt es die folgenden Vorschläge für sinnvolle Einstellungen.
+\begin{description}
+\item[Font:] Arial, 11 Punkt oder Times New Roman, 12 Punkt (wie in diesem Beispiel); die Schriftgröße soll mindestens 11 Punkt betragen. Auf keinen Fall sollen Schmuck- oder Serifenschriften verwendet werden, um die Lesbarkeit nicht zu erschweren.
+\item[Satz:] Es soll Blocksatz verwendet werden. Große Lücken zwischen Wörtern sollen durch geeignete Trennungen vermieden werden.
+\item[Abstände zum Seitenrand:] Links 2,5 cm; Rechts 2,5 cm; Oben 2,5 cm; Unten 2,5 cm (bei sehr umfangreichen Arbeiten auch mehr Platz links, um die Bindung nicht zu sehr zu belasten)
+\item[Zeilenabstand:] 1,5-facher Zeilenabstand; dieses wird in dieser Vorlage mit dem Package \textit{setspace} erreicht. 
+\item[Seitenverwendung:] Die Seiten sollten für die beiden Abgabeexemplare nur einseitig beschrieben werden; hierzu ist in dieser Vorlage die Option \textit{oneside} bei der \textit{documentclass} aktiviert. 
+\item[Verzeichnisse:] Es gibt mehrere Verzeichnisse in dieser Arbeit, wie das Inhaltsverzeichnis, Abbildungsverzeichnis, usw. Es ist nicht notwendig, diese von Hand zu erstellen, da sie vom eigentlichen Text abgeleitet sind. Es sollte LaTeX überlassen werden, diese Verzeichnisse automatisch zu erstellen. 
+\end{description}
+
+\section{Hervorhebungen}
+
+Für Hervorhebungen in Texten bietet sich die Verwendung von \textbf{Fettdruck} oder \textit{Kursivschrift} an. Die Verwendung von \underline{Unterstreichungen} oder GROSSBUCHSTABEN ist in wissenschaftlichen Texten unüblich. Solche Arten von Hervorhebungen sollten eher selten genutzt werden, z.B. bei der Kursivschrift zur Hervorhebung eines neuen Begriffes, der im umgebenden Text erklärt wird. Alternativ könnte dieser mit Anführungsstrichen geschrieben werden. Die Verwendung von Kursivschrift fällt dabei nicht so stark ins Auge wie der Fettdruck. Etwas kursiv Hervorgehobenes wird nur wahrgenommen, wenn der Text gelesen wird, während der Fettdruck auch beim Betrachten der ganzen Seite auffällt.
+
+\section{Quellenangaben und Zitate}
+
+Auf Literatur muss verwiesen werden, wenn fremde Texte für die eigene Arbeit verwendet wurden. Es ist jeweils eine Referenz auf die Literaturliste vorzunehmen, die dann die Informationen zum Auffinden der Arbeit enthält. Für Zitierungen gibt es verschiedene Empfehlungen, wie diese genau aussehen sollen. Die Empfehlungen von IEEE können dabei verwendet werden \cite{ieeecitation09}. Die BibTeX-Datei zu diesem Dokument enthält Beispiele für verschiedene Arten von Quellen. 
+
+Die Verwendung von Fußnoten ist möglich, wird jedoch nicht empfohlen, da dieses bei wiederholtem Bezug auf dieselbe Quelle zu einer Replikation der Informationen führt oder das Auffinden der ersten Fußnote notwendig macht. Fußnoten stören zudem den Lesefluss und ihre Verwendung ist bei Texten in der Elektrotechnik und Informatik im Gegensatz zu anderen Wissenschaftsdisziplinen eher unüblich.
+
+Bei wörtlichen Zitaten müssen diese mit Anführungsstrichen deutlich gemacht werden. In der Elektrotechnik und Informatik sind wörtliche Zitate in vielen Fällen nicht zweckmäßig und sollten möglichst kurz ausfallen. Es ist besser die Sachverhalte in eigenen Worten wiederzugeben (aber natürlich weiterhin auf die Quelle zu verweisen). Eine Ausnahme stellt die Definition von wichtigen Begriffen dar, bei der durch eine eigene Formulierung leicht die Präzision verloren gehen kann. In einem solchen Fall ist es günstig die Quelle exakt anzugeben, d.h. bei einem Buch die genaue Seite zu nennen.
+
+Beim Verweisen auf Internetseiten sollte beachtet werden, dass diese geändert werden können. Es sollte daher ein Hinweis gegeben werden, wann diese zuletzt überprüft wurde. Außerdem sollte die Internetseite, wenn möglich, heruntergeladen werden, damit der Bezug auf die Informationen weiterhin möglich bleibt.
+
+\section{Bilder}
+
+Abbildungen sind in vielen Fällen geeignet, um komplizierte Sachverhalte zu verdeutlichen. Auch wenn eine Abbildung möglichst selbsterklärend sein sollte, ist es auf jeden Fall notwendig, diese mit einer Bildunterschrift zu versehen, im Text mindestens einmal Bezug zu der Abbildung zu nehmen und die Abbildung zu erklären. Sollte die Abbildung aus einer Quelle übernommen sein, dann muss in der Bildunterschrift auf diese Quelle verwiesen werden. 
+
+Die Abbildungen sollten einen klaren Mehrwert bringen. Dieses trifft beispielsweise nicht auf  Firmenlogos zu. Außerdem sollten Screenshots nur wenig verwendet werden (eventuell zusätzlich im Anhang oder CD).
+
+Die Verwendung von farbigen Abbildungen kann problematisch sein, wenn die Arbeit nachher einmal auf schwarz/weiß ausgedruckt wird. Es ist zu empfehlen, dass die Abbildungen entweder nur in schwarz/weiß zu erstellen oder bei der Abgabe der Exemplare farbige Seiten einzufügen. Insgesamt sollte auf eine gute Qualität der Abbildungen geachtet werden, so dass z.B. die Schrift in den Abbildungen auf jeden Fall lesbar ist.
+
+Bei der Benennung der Abbildungen ist eine kapitelweise Nummerierung oftmals günstiger als eine Nummerierung für das gesamte Dokument. Dieses ist bei LaTeX aber schon standardmäßig der Fall.
+
+\section{Tabellen}
+
+Für Tabellen gelten ähnliche Randbedingungen wie für Abbildungen. Diese sollen eindeutig nummeriert, mit einer Tabellenunterschrift versehen, im Text referenziert und erklärt werden.
+
+\section{Programmcode}
+
+Bei studentischen Arbeiten, in denen Programmcode erstellt wird, kann dieser in der Arbeit diskutiert werden. Da der Programmcode in vielen Fällen umfangreich ist, sollten nur besonders wichtige Stellen des Codes dargestellt sein. Alternativ kann man gewisse Teile auch in einem Pseudocode ausdrücken, um das Verständnis zu erleichtern. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.7\textwidth]{beispielcode} % PNG-File
+  \caption{Beispiel eines Programmcodes}\label{fig:beispielcode}
+\end{figure}
+
+Abbildung \ref{fig:beispielcode} zeigt das Beispiel eines Programmcodes. Die Angabe des Programmcodes wird hier auch als Abbildung bezeichnet. Dieses bietet sich meistens an, anstatt eine weitere Kategorie von Programmcodes zu erstellen.
+
+\lstset{emph={int,for},emphstyle=\normalfont \ttfamily \color{red},
+backgroundcolor=\color{lightestyellow},
+stringstyle=\normalfont \ttfamily,
+basicstyle=\normalfont \ttfamily,
+numbers=left}
+\begin{lstlisting}[frame=trb,captionpos=b,caption=Darstellung von Programmcode mit 1stlisting,label=lst:beispielcode]
+int $i;
+for($i = 0; $i < 10; $i++) {
+echo $i;
+}
+\end{lstlisting} 
+
+Alternativ kann der Programmcode mit Hilfe eines speziellen LaTeX Packages namens Listings dargestellt werden, wozu in Listing \ref{lst:beispielcode} ein Beispiel dargestellt ist.
+
+Im Zusammenhang mit der Entwicklung von Programmcode wird empfohlen ein Versionsverwaltungssystem zu verwenden. Zu diesem Zweck befindet sich in der Vorlage ein Subversion-Tutorial (im Verzeichnis "`Material"').
+
+\section{Abkürzungen und Begriffe}
+
+Abkürzungen kommen häufig vor, um die Lesbarkeit der Texte zu erleichtern. Hierbei gilt, dass die Abkürzungen beim ersten Auftreten im Text erklärt werden müssen. Sie sollten daher einmal im Text (nicht in einer Fußnote) ausgeschrieben und dahinter in Klammern erklärt werden. Später sollte die eingeführte Abkürzung dann stets verwendet und nicht noch einmal ausgeschrieben werden.
+
+Bei Begriffen ist es wichtig, Unklarheiten zu vermeiden. Daher ist es im Gegensatz zu Texten in Prosa nicht günstig (wo man eine Eintönigkeit vermeiden möchte), unterschiedliche Begriffe für das gleiche Konzept zu verwenden (z.B. Computer, Rechner oder Maschine). 
+
+Ein Glossar sowie ein extra Verzeichnis für Abkürzungen sind für studentische Abschlussarbeiten (abgesehen von Promotionen und Habilitationen) nicht notwendig. Ebenso wird kein Stichwortindex benötigt. 
+
+\section{Rechtschreibung}
+
+Rechtschreibfehler und falsche Grammatik (insbesondere Kommafehler) machen einen schlechten Eindruck und sollten vermieden werden. Neben der Verwendung einer automatischen Rechtschreibprüfung sollten weitere Personen die Arbeit vor der Abgabe auf diese Aspekte überprüfen. Ansonsten entsteht der Eindruck, dass vielleicht nicht nur sprachlich, sondern auch bezüglich der Inhalte nur oberflächlich gearbeitet wurde. 
+
+\endinput 

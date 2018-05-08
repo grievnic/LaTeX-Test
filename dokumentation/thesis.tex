@@ -1,0 +1,94 @@
+%
+% Einfache LaTeX-Vorlage für studentische Arbeiten
+% - optimiert für die Arbeit mit gängigen LaTeX-Editoren
+% - funktioniert ohne Makefile und Anpassungen der LaTeX-Verzeichnisstruktur
+% - verwendet Komaskript für ein (nach europäischen Gepflogenheiten) schöneres Layout
+% 
+% v1, 2007 (Michael Brenner,MNM-Team,LRZ-München
+% Diese Version: v1.1, 2012 (Michael Brenner, MNM-Team, LRZ-München)
+% angepasst von Andreas Hanemann an die Randbedingungen der FH Lübeck
+
+
+\documentclass[bibliography=totoc,listof=totoc,BCOR=5mm,DIV=12,oneside]{scrbook} % Rand für Bindung: 5mm / falls Index verwendet, ergänze "index=totoc" zu den Optionen
+% Ergänzung oneside für einseitigen Druck 
+\usepackage{bibgerm}       % deutsche Literaturverzeichnisse
+\usepackage[latin1]{inputenc} % Umlaute im Text
+\usepackage{graphicx} % Einfügen von Grafiken  - für PDF-Latex: .pdf und .png (.jpg möglich, sollte aber vermieden werden)
+\usepackage{url}           % URL's (z.B. in Literatur) schöner formatieren
+\usepackage[onehalfspacing]{setspace} %für eineinhalbfachen Zeilenabstand, kann für Zwischenstände auskommentiert werden
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{listings} %zur Darstellung von Quelltext mit \begin{1stlisting}... \end{1stlisting}
+\usepackage{color}
+\definecolor{lightestyellow}{rgb}{1,1,0.9}
+\usepackage{hyperref} % sorgt für für Hyperlinks in PDF-Dokumenten
+% \usepackage{glossaries} hiermit kann man einen Glossar erstellen, nicht empfohlen für Bachelor- und Masterarbeiten
+% \makeglossaries
+% \include{glossary} Datei glossary.tex könnte Glossareinträge enthalten, diese werden mit \newglossaryentry{} und \newacronym{} definiert
+%ab hier kommen Pakete, die nützlich sein können, bei Bedarf anschalten; Empfehlungen von Marco Trettner
+% \usepackage{float} %für Gleitkommazahlen
+% \usepackage{tabularx} %für Tabellen
+% \usepackage{ragged2e} %Formatierung von Formeln oder Tabellen
+% \usepackage{amsmath} %bessere Mathefunktionen
+% \usepackage{amssymb} %mehr mathematische Symbole
+% \usepackage[decimalsymbol=comma]{siunitx}, um Werte mit ihren Einheiten schön darzustellen. Anstatt "I=5mA" schreibt man dann "I=\SI{5}{\milli\ampere}. Dann entsteht automatisch ein schöner kleiner Abstand zwischen dem Wert und der Einheit. Außerdem wird die Einheit nicht kursiv geschrieben. Das geht natürlich nur in einer Mathe-Umgebung.
+% \usepackage[nolist]{acronym} für Abkürzungen. Dazu habe ich noch eine Datei eingefügt mit "\input{acronym}", in der die Abkürzungen in der Umgebung \begin{acronym}[Bash] durch z.B. \acro{IP}{Internet Protocol} aufgelistet werden. Im Dokument selbst gibt man dann nur \ac{IP} ein und das erste Vorkommen wird ausgeschrieben. Es gibt noch ein paar Möglichkeiten, die das Paket liefert. Z.B. wir durch \acp der Plural auch angezeigt, was manchmal sehr hilfreich ist. Das Argument [nolist] habe ich genommen, damit die Abkürzungen nicht extra aufgelistet werden in einem Glossar.
+% \usepackage{textcomp} für "TM" Symbole
+% \usepackage[babel, german=quotes]{csquotes}; \usepackage[backend=biber, style=ieee]{biblatex} für Zitate mithilfe von Biblatex. Der Style "ieee" sorgt z.B. für die fortlaufende Nummerierung von Beginn an. Es gibt aber auch irgendwie 30 verschiedene Styles, die man einstellen kann.
+% \usepackage{etoolbox}; \usepackage{hyperref} für URLs
+% Ende Empfelungen Marco Trettner
+\usepackage[backend=biber, style=alphabetic]{biblatex} %die Biliothek wird mit Biber statt mit Bibtaltex erzeugt; ggf. "biber" einstellen in der Entwicklungsumgebung
+\addbibresource{./bib/thesis.bib}
+\graphicspath{{./bilder/}}
+
+\input{hyphenation} % in dieses File kommen Wörter die Latex nicht richtig trennt
+
+% spezielle Befehle von Marco Trettner; dritter standardmäßig angeschaltet
+% \sisetup{exponent-product = \cdot, output-product = \cdot}
+%Damit kriegt man die "X" bei der Darstellung von Exponentialzahlen zu einem Multiplikationszeichen gewandelt (4.5 x 10^3 wird zu 4.5 \cdot 10^-3)
+%\lstdefinestyle{customC}{language=C, frame=lr, rulecolor=\color{blue!80!black}, keywordstyle=\bfseries\color{blue!80!black}, basicstyle=\footnotesize\ttfamily,}
+%\lstdefinestyle{Console}{backgroundcolor=\color{white}, basicstyle=\scriptsize\color{black}\ttfamily}
+%Das sind zwei Listing Styles, die ich für mich verwende, um C-Code oder um Konsolenausgaben anzuzeigen. Ist auch eine schöne Sache dieses Tool.
+\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
+\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+\setcounter{biburlucpenalty}{9000}% Großbuchstaben
+%Das ist ganz wichtig. Das durch Biblatex erzeugte Literaturverzeichnis kann Links enthalten, die mit \url erzeugt worden sind. Dabei kann es sein, dass die über den Rand hinaus gehen. Durch die beiden Befehle \setcounter wird einfach am Rand abgebrochen, sodass der Link noch funktioniert und die Optik beim Blockschreibsatz bleibt.
+
+
+\begin{document}
+
+% ---------------------------------------------------------------
+\frontmatter % Titelblätter und Erklärung
+    \pagestyle{empty} % Seitennummerierung abschalten
+		\include{titel-fhl} % Titelblätter FHL 
+    \cleardoublepage
+    \include{abstract} % Abstract 
+    \cleardoublepage
+    \include{erklaerung-fhl} % Erklärung (Arbeit selbstständig verfasst)
+		\cleardoublepage
+    \include{zusammenfassung} % optional
+    \tableofcontents % Inhaltsverzeichnis
+    \addtocontents{toc}{\protect\thispagestyle{empty}}
+		
+% ---------------------------------------------------------------
+\mainmatter % die eigentliche Arbeit
+    \pagestyle{plain} % Seitennummerierung anschalten
+    \input{kapitel1}
+    \input{kapitel2}
+		\input{kapitel3}
+    \input{kapitel4}
+		\input{kapitel5}
+    \input{kapitel6}
+
+% ---------------------------------------------------------------
+\backmatter % ab hier keine Nummerierung mehr
+    \input{faq}
+	\listoffigures
+	\listoftables
+	% \printglossaries hiermit würde der Glossar dargestellt
+    %\bibliographystyle{geralpha} %alte Befehle ohne biber
+    %\bibliography{./bib/thesis}
+	\printbibliography
+
+\end{document}

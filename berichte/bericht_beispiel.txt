@@ -1,0 +1,27 @@
+Name:
+Peter Müller
+
+Titel der Arbeit:
+Integration eines Beschleunigungssensors in ein Einbettetes System für Sensornetze
+
+Berichtsdatum:
+08. Juni 2008
+
+Berichtszeitraum:
+01-07. Juni 2008 (l Woche)
+
+Tätigkeiten:
+1. Eine Filterfunktion wurde den Algorithmen hinzugefügt
+
+
+Zwischenergebnis:
+1. Erweiterung der Quelldatei acc.c
+
+Dokumentation:
+1. Hinzufügen eines Abschnitts über Filterfunktionen in /dokumentation/thesis.doc
+2. Datenblätter über Filtertypen wurden systematisch abgelegt unter /material/datenblätter
+3. Auswertungskapitel wurde begonnen in /dokumentation/thesis.doc
+
+Nächste Schritte:
+1. 15. Juni 2008 - Hinzufügen eines neuen Filtertyps und dessen Evaluation
+2. 15. Juni 2008 - Bereitstellung eines kompletten Entwurfs der schriftlichen Arbeit

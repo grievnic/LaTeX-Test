@@ -1,0 +1,7 @@
+Diese Datei erklärt die Struktur der Verzeichnisse
+
+- “dokumentation” für die schriftliche Arbeit (mit der Hauptdatei thesis.tex)
+- “material” für fremde Materialien mit Bezug zur Arbeit (Artikel, etc)
+- “präsentation” für die Präsentation der Arbeit beim Kolloquium
+- “berichte” für die Mitteilung über Zwischenstände der Arbeit
+- “quellen” für eigene Quellcodes, Modelle, usw.

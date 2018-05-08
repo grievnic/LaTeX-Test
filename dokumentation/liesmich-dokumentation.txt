@@ -1,0 +1,18 @@
+Zur Verwendung dieses Templates
+-------------------------------
+
+In diesem Template ist das Latex-Main-File /Dokumentation/thesis.tex
+
+Das Template ist für PDFLaTex optimiert. 
+Für normales LaTeX die einzubindenden Grafikdateien in .ps oder .eps konvertieren 
+und das hyperref-Package nicht mit usepackage einbinden.
+
+Es ist für die Verwendung mit MikTeX und dem Editor TeXnicCenter getestet.
+
+
+Historie
+--------
+
+Vorlage vom MNM-Team München (Michael Brenner), 
+angepasst für die FH Lübeck von Andreas Hanemann
+ 
